@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import Tabs from "./UI/Tabs";
+import Tabs from "./UI/Tabs/Tabs";
 
 function App() {
     const tabs = [
