@@ -1,5 +1,5 @@
 import React, {FC, useId} from 'react';
-import {ITabsProps} from "../../interfaces/ITabs";
+import {ITabsProps} from "../../../interfaces/UI/ITabs";
 import Tab from "../Tab/Tab";
 import './Tabs.css'
 

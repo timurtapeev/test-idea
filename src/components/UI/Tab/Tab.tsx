@@ -1,6 +1,6 @@
 import React, {FC, memo} from 'react';
 import './Tab.css'
-import {ITabProps} from "../../interfaces/ITab";
+import {ITabProps} from "../../../interfaces/UI/ITab";
 
 const Tab: FC<ITabProps> =
 ({
