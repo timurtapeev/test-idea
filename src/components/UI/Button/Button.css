@@ -1,0 +1,18 @@
+.Button {
+    width: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+
+    color: white;
+    background-color: #fb7a00;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.2s;
+
+}
+.Button:hover {
+    background-color: #fb8e12;
+}
+.Button:active {
+    background-color: #e36c00;
+}
