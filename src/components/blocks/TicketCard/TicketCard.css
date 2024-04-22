@@ -1,0 +1,54 @@
+.Ticket {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background-color: white;
+    border-radius: 5px;
+}
+.Ticket__left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+.Ticket__right-col {
+    display: grid;
+    grid-column: 2 / 5;
+    grid-template-columns: auto 1fr 1fr 1fr 1fr auto;
+    grid-template-rows: repeat(2, auto);
+
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    padding: 1.5rem;
+}
+.Ticket__stops {
+    grid-column: 2 / 6;
+}
+.Ticket__stops {
+    color: #b1b1b1;
+    text-align: center;
+}
+.Ticket__date {
+    color: #b1b1b1;
+}
+.Ticket__city {
+    color: #525252;
+}
+.Ticket__time {
+    color: #525252;
+    line-height: 1;
+    font-size: 40px;
+}
+.Ticket__airport-info {
+    grid-column: span 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    &:last-child {
+        align-items: flex-end;
+    }
+}
