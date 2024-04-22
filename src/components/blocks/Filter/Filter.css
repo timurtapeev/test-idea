@@ -7,3 +7,19 @@
     background-color: white;
     border-radius: 5px;
 }
+.Filter__field-title {
+    color: #525252;
+    display: block;
+    padding: 0 0.75rem;
+    margin-bottom: 0.5rem;
+}
+.Filter__field {
+    margin-bottom: 1.25rem;
+}
+.Filter__field:first-child {
+    padding-top: 1.5rem;
+}
+.Filter__field:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0.75rem;
+}

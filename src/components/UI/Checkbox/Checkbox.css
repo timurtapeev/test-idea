@@ -3,7 +3,6 @@
     transition: all 0.2s;
     cursor: pointer;
 }
-
 .Checkbox:hover {
     background-color: #e4f3ff;
 }

@@ -13,7 +13,7 @@ const TicketCard: FC<ITicketProps> = ({ticket}) => {
 
                 <Button>
                     Купить <br/>
-                    за {addSpacesToNumber(ticket.price)}
+                    за {`${addSpacesToNumber(ticket.price)} `}
                 </Button>
             </div>
             <div className="Ticket__right-col">

@@ -4,23 +4,37 @@ import Tabs from "../../UI/Tabs/Tabs";
 import CheckboxGroup from "../../UI/CheckboxGroup/CheckboxGroup";
 import {IFilter} from "../../../interfaces/blocks/IFilter";
 
-const Filter: FC<IFilter> = ({tabs, checkboxes}) => {
-    const [tabsValue, setTabsValue] = useState(tabs[0].value)
-    const [activeCheckboxes, setActiveCheckboxes] = useState(['all'])
-
-
+const Filter: FC<IFilter> = ({fields}) => {
     return (
         <div className="Filter">
-            <Tabs
-                tabs={tabs}
-                value={tabsValue}
-                change={setTabsValue}
-            />
-            <CheckboxGroup
-                checkboxes={checkboxes}
-                activeCheckboxes={activeCheckboxes}
-                changeValue={setActiveCheckboxes}
-            />
+            {fields.map((el, i) => {
+                switch (el.type) {
+                    case 'tabs':
+                        return (
+                            <div className="Filter__field">
+                                <span className="Filter__field-title">{el.name}</span>
+                                <Tabs
+                                    key={i}
+                                    tabs={el.fields}
+                                    value={el.value}
+                                    change={el.change}
+                                />
+                            </div>
+                        )
+                    case 'checkboxGroup':
+                        return (
+                            <div className="Filter__field">
+                                <span className="Filter__field-title">{el.name}</span>
+                                <CheckboxGroup
+                                    key={i}
+                                    checkboxes={el.fields}
+                                    activeCheckboxes={el.value}
+                                    changeValue={el.change}
+                                />
+                            </div>
+                        )
+                }
+            })}
         </div>
     );
 };
