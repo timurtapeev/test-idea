@@ -1,5 +1,7 @@
 import {ITab} from "../UI/ITab";
+import {ICheckbox} from "../UI/ICheckbox";
 
 export interface IFilter {
-    tabs: ITab[]
+    tabs: ITab[],
+    checkboxes: ICheckbox[],
 }

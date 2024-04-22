@@ -1,11 +1,10 @@
-import React, {FC, useId} from 'react';
+import React, {FC, useId, memo} from 'react';
 import {ITabsProps} from "../../../interfaces/UI/ITabs";
 import Tab from "../Tab/Tab";
 import './Tabs.css'
 
 const Tabs: FC<ITabsProps> = ({tabs, value, change}) => {
     const id = useId()
-
     return (
         <div className="Tabs">
             {tabs.map((el) => {
@@ -24,4 +23,4 @@ const Tabs: FC<ITabsProps> = ({tabs, value, change}) => {
     );
 };
 
-export default Tabs;
+export default memo(Tabs);
