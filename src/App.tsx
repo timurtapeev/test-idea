@@ -1,31 +1,31 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import Tabs from "./UI/Tabs/Tabs";
+import Filter from "./components/blocks/Filter";
 
 function App() {
     const tabs = [
-    {
-      text: 'RUB',
-      value: 'RUB',
-    },
-    {
-      text: 'USD',
-      value: 'USD',
-    },
-    {
-      text: 'EUR',
-      value: 'EUR',
-    },
-  ]
-    const [tabsValue, setTabsValue] = useState('RUB')
+        {
+            text: 'RUB',
+            value: 'RUB',
+        },
+        {
+            text: 'USD',
+            value: 'USD',
+        },
+        {
+            text: 'EUR',
+            value: 'EUR',
+        },
+    ]
 
     return (
     <div className="App">
-        <Tabs
-            tabs={tabs}
-            value={tabsValue}
-            change={setTabsValue}
-        />
+        <div className="container">
+            <Filter
+                tabs={tabs}
+            />
+
+        </div>
     </div>
     );
 }
