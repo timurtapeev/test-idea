@@ -3,6 +3,7 @@ import './TicketCard.css'
 import {ITicketProps} from "../../../interfaces/blocks/ITicket";
 import getNoun from "../../../service/helpers/getNon";
 import Button from "../../UI/Button/Button";
+import {addSpacesToNumber} from "../../../service/helpers/addSpacesToNumber";
 
 const TicketCard: FC<ITicketProps> = ({ticket}) => {
     return (
@@ -12,7 +13,7 @@ const TicketCard: FC<ITicketProps> = ({ticket}) => {
 
                 <Button>
                     Купить <br/>
-                    за {ticket.price}
+                    за {addSpacesToNumber(ticket.price)}
                 </Button>
             </div>
             <div className="Ticket__right-col">
