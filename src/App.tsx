@@ -1,8 +1,11 @@
 import React from 'react';
 import './App.css';
-import Filter from "./components/blocks/Filter";
+import tickets from './tickets.json'
+import {ITicket} from "./interfaces/service/ITicket";
+import TicketFilter from "./components/blocks/TicketFilter/TicketFilter";
 
 function App() {
+    const data: ITicket[] = tickets.tickets
     const tabs = [
         {
             text: 'RUB',
@@ -43,11 +46,11 @@ function App() {
     return (
     <div className="App">
         <div className="container">
-            <Filter
+            <TicketFilter
                 tabs={tabs}
                 checkboxes={checkboxes}
+                data={data}
             />
-
         </div>
     </div>
     );

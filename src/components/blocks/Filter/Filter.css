@@ -1,0 +1,9 @@
+.Filter {
+    position: sticky;
+    height: fit-content;
+    width: fit-content;
+    top: 1rem;
+
+    background-color: white;
+    border-radius: 5px;
+}

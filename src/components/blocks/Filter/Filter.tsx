@@ -1,7 +1,8 @@
 import React, {useState, FC} from 'react';
-import Tabs from "../UI/Tabs/Tabs";
-import {IFilter} from "../../interfaces/blocks/IFilter";
-import CheckboxGroup from "../UI/CheckboxGroup/CheckboxGroup";
+import './Filter.css'
+import Tabs from "../../UI/Tabs/Tabs";
+import CheckboxGroup from "../../UI/CheckboxGroup/CheckboxGroup";
+import {IFilter} from "../../../interfaces/blocks/IFilter";
 
 const Filter: FC<IFilter> = ({tabs, checkboxes}) => {
     const [tabsValue, setTabsValue] = useState(tabs[0].value)
@@ -9,7 +10,7 @@ const Filter: FC<IFilter> = ({tabs, checkboxes}) => {
 
 
     return (
-        <div>
+        <div className="Filter">
             <Tabs
                 tabs={tabs}
                 value={tabsValue}
