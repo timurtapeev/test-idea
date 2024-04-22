@@ -10,7 +10,6 @@ const Tab: FC<ITabProps> =
      tabsGroupId,
      change,
 }) => {
-    console.log('render Tab')
     return (
         <label
             key={value}
