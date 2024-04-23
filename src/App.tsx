@@ -11,20 +11,20 @@ function App() {
         {
             text: 'RUB',
             value: 'RUB',
-            // symbol: '₽',
-            // cost: 1,
+            symbol: '₽',
+            cost: 1,
         },
         {
             text: 'USD',
             value: 'USD',
-            // symbol: '$',
-            // cost: 94,
+            symbol: '$',
+            cost: 94,
         },
         {
             text: 'EUR',
             value: 'EUR',
-            // symbol: '€',
-            // cost: 100,
+            symbol: '€',
+            cost: 100,
         },
     ]
     const checkboxes = [
@@ -52,13 +52,13 @@ function App() {
 
     return (
     <div className="App">
-            <div className="container">
-                <TicketFilter
-                    tabs={tabs}
-                    checkboxes={checkboxes}
-                    data={data}
-                />
-            </div>
+        <div className="container">
+            <TicketFilter
+                tabs={tabs}
+                checkboxes={checkboxes}
+                data={data}
+            />
+        </div>
     </div>
     );
 }

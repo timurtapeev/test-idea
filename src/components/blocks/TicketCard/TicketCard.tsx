@@ -5,7 +5,7 @@ import getNoun from "../../../service/helpers/getNon";
 import Button from "../../UI/Button/Button";
 import {addSpacesToNumber} from "../../../service/helpers/addSpacesToNumber";
 
-const TicketCard: FC<ITicketProps> = ({ticket}) => {
+const TicketCard: FC<ITicketProps> = ({ticket, activeCurrency}) => {
     return (
         <div className="Ticket">
             <div className="Ticket__left-col">
@@ -13,7 +13,7 @@ const TicketCard: FC<ITicketProps> = ({ticket}) => {
 
                 <Button>
                     Купить <br/>
-                    за {`${addSpacesToNumber(ticket.price)} `}
+                    за {`${addSpacesToNumber(ticket.price / activeCurrency.cost)} ${activeCurrency.symbol}`}
                 </Button>
             </div>
             <div className="Ticket__right-col">

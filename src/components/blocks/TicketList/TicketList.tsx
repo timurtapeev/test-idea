@@ -3,7 +3,7 @@ import './TicketList.css'
 import {ITicketListProps} from "../../../interfaces/blocks/ITicketList";
 import TicketCard from "../TicketCard/TicketCard";
 
-const TicketList: FC<ITicketListProps> = ({ticketList}) => {
+const TicketList: FC<ITicketListProps> = ({ticketList, activeCurrency}) => {
     return (
         <div className="TicketList">
             {ticketList.map((el, i) => {
@@ -11,6 +11,7 @@ const TicketList: FC<ITicketListProps> = ({ticketList}) => {
                     <TicketCard
                         key={i}
                         ticket={el}
+                        activeCurrency={activeCurrency}
                     />
                 )
             })}

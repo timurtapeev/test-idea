@@ -8,6 +8,7 @@ import {IFilterFieldCheckboxGroup, IFilterFieldTabs} from "../../../interfaces/b
 const TicketFilter: FC<ITicketFilter> = ({tabs, checkboxes, data}) => {
     const [tabsValue, setTabsValue] = useState(tabs[0].value)
     const [activeCheckboxes, setActiveCheckboxes] = useState(['all'])
+    const activeTab = tabs.find((el) => el.value === tabsValue)
     const fields: (IFilterFieldTabs | IFilterFieldCheckboxGroup)[] = [
         {
             name: 'Валюта',
@@ -24,7 +25,6 @@ const TicketFilter: FC<ITicketFilter> = ({tabs, checkboxes, data}) => {
             value: activeCheckboxes,
         },
     ]
-    const activeTab = tabs.find((el) => el.value === tabsValue)
 
     return (
         <div className="TicketFilter">
@@ -34,8 +34,7 @@ const TicketFilter: FC<ITicketFilter> = ({tabs, checkboxes, data}) => {
 
             <TicketList
                 ticketList={data}
-                // currencySymbol={activeTab.symbol}
-                // currencyCost={activeTab.cost}
+                activeCurrency={{symbol: activeTab?.symbol ?? '₽', cost: activeTab?.cost ?? 1}}
             />
         </div>
     );
