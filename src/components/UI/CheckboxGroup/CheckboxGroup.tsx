@@ -3,7 +3,6 @@ import {ICheckboxGroup} from "../../../interfaces/UI/ICheckboxGroup";
 import Checkbox from "../Checkbox/Checkbox";
 
 const CheckboxGroup: FC<ICheckboxGroup> = ({checkboxes, activeCheckboxes, changeValue}) => {
-
     const changeValueHandler = useCallback((value: string) => {
         changeValue((prevState) => {
             if (value === 'all') {
@@ -21,8 +20,6 @@ const CheckboxGroup: FC<ICheckboxGroup> = ({checkboxes, activeCheckboxes, change
             }
         })
     }, [])
-
-    console.log('CheckboxGroup')
 
     return (
         <div>

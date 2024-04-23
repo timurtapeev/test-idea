@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import tickets from './tickets.json'
-import {CurrencyContext} from "./service/context/CurrencyContext";
+import ticketsJSON from './tickets.json'
 import {ITicket} from "./interfaces/service/ITicket";
 import TicketFilter from "./components/blocks/TicketFilter/TicketFilter";
 
 function App() {
-    const data: ITicket[] = tickets.tickets
+    const data: ITicket[] = ticketsJSON.tickets
     const tabs = [
         {
             text: 'RUB',
@@ -56,7 +55,7 @@ function App() {
             <TicketFilter
                 tabs={tabs}
                 checkboxes={checkboxes}
-                data={data}
+                tickets={data}
             />
         </div>
     </div>
